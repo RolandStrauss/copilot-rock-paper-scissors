@@ -1,7 +1,7 @@
 # gui.py
 """
 Tkinter-based GUI for Rock-Paper-Scissors-Lizard-Spock game.
-Supports single-player and two-player modes, user name entry, and will be themed for Halloween.
+Supports single-player and two-player modes, user name entry, and is themed for Halloween.
 """
 import tkinter as tk
 from tkinter import messagebox
@@ -16,16 +16,16 @@ class RPSLSApp(tk.Tk):
         self.player1_name = tk.StringVar()
         self.player2_name = tk.StringVar()
         self.name_frame = tk.Frame(self, bg="#2d1b2d")
-        tk.Label(self.name_frame, text="Enter Player 1 Name:", fg="#fff", bg="#2d1b2d", font=("Arial", 12)).pack(pady=5)
+        tk.Label(self.name_frame, text="Enter Player 1 Name:", fg="#fff", bg="#2d1b2d", font=("Creepster", 14, "bold")).pack(pady=5)
         tk.Entry(self.name_frame, textvariable=self.player1_name, font=("Arial", 12)).pack(pady=5)
-        tk.Label(self.name_frame, text="Enter Player 2 Name (or leave blank for computer):", fg="#fff", bg="#2d1b2d", font=("Arial", 12)).pack(pady=5)
+        tk.Label(self.name_frame, text="Enter Player 2 Name (or leave blank for computer):", fg="#fff", bg="#2d1b2d", font=("Creepster", 14, "bold")).pack(pady=5)
         tk.Entry(self.name_frame, textvariable=self.player2_name, font=("Arial", 12)).pack(pady=5)
-        tk.Button(self.name_frame, text="Start Game", command=self.start_game, fg="#fff", bg="#ff7518", font=("Arial", 12, "bold")).pack(pady=10)
+        tk.Button(self.name_frame, text="Start Game", command=self.start_game, fg="#fff", bg="#ff7518", font=("Arial", 12, "bold"), activebackground="#ff7518", activeforeground="#2d1b2d").pack(pady=10)
         self.name_frame.pack(pady=20)
         # Rules button
-        self.rules_button = tk.Button(self, text="Show Rules", command=self.show_rules, fg="#fff", bg="#ff7518", font=("Arial", 14, "bold"))
+        self.rules_button = tk.Button(self, text="Show Rules", command=self.show_rules, fg="#fff", bg="#ff7518", font=("Arial", 14, "bold"), activebackground="#ff7518", activeforeground="#2d1b2d")
         # Replay button
-        self.replay_button = tk.Button(self, text="Replay", command=self.replay_game, fg="#fff", bg="#ff7518", font=("Arial", 14, "bold"))
+        self.replay_button = tk.Button(self, text="Replay", command=self.replay_game, fg="#fff", bg="#ff7518", font=("Arial", 14, "bold"), activebackground="#ff7518", activeforeground="#2d1b2d")
         self.replay_button.pack_forget()  # Hide initially
         # Input for player move (for demonstration)
         self.input_label = tk.Label(self, text="Enter your move (Rock, Paper, Scissors, Lizard, Spock):", fg="#fff", bg="#2d1b2d", font=("Arial", 12))
@@ -34,6 +34,9 @@ class RPSLSApp(tk.Tk):
         self.input_entry.pack(pady=5)
         self.submit_button = tk.Button(self, text="Submit Move", command=self.handle_move, fg="#fff", bg="#ff7518", font=("Arial", 12, "bold"))
         self.submit_button.pack(pady=5)
+        # Add a Halloween-themed label at the bottom
+        self.halloween_label = tk.Label(self, text="🎃 Happy Halloween! 🎃", fg="#ff7518", bg="#2d1b2d", font=("Creepster", 20, "bold"))
+        self.halloween_label.pack(side="bottom", pady=10)
 
     def show_rules(self):
         messagebox.showinfo("Game Rules", RULES_TEXT)

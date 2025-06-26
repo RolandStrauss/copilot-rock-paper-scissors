@@ -25,3 +25,6 @@ def save_high_score(name, score):
 
 def get_high_scores():
     return load_high_scores()
+
+# Usage: Call save_high_score(player_name, score) after a game ends.
+# Display get_high_scores() in the GUI, showing player names and scores.

@@ -15,8 +15,8 @@
 - [x] Sound effects for game actions
 - [x] Save high scores
 - [x] Users must enter names before the game begins
-- [ ] Use player names in the high score list
-- [ ] Halloween theme for the GUI
+- [x] Use player names in the high score list
+- [x] Halloween theme for the GUI
 
 ### Challenge #1: Lizard and Spock
 - [ ] Add Lizard and Spock to the game logic

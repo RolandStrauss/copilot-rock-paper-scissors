@@ -36,6 +36,7 @@
 - [x] Sound effects module created and playsound installed (see sound.py)
 - [x] High scores module created (see high_scores.py)
 - [x] Name entry required before game begins (see gui.py)
-- [x] Player names now used in the high score list (see high_scores.py)
+- [x] Player names used in high score list (see high_scores.py)
+- [x] Halloween theme applied to GUI (see gui.py)
 
 All user answers above are now recorded. All further prompts and actions will be recorded in this file for your reference.
